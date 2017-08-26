@@ -96,7 +96,7 @@
                 dailyEntryResource: "dailyEntryResource",
 
                 dailyEntries: function (dailyEntryResource) {
-                  return dailyEntryResource.query(function(response) {
+                  return dailyEntryResource.get(function(response) {
                         // no code needed for success
                       },
                       function(response) {
