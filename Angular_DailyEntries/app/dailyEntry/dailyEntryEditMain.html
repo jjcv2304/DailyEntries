@@ -1,0 +1,138 @@
+<form class="form-horizontal" name="dailyEntryEditForm">
+  <fieldset>
+    <legend>Daily Entry Information</legend>
+
+    <div class="form-group" >
+      <label class="col-md-2 control-label"
+             for="inputDailyEntryDate">Date</label>
+      <div class="col-md-3">
+        <div class="input-group">
+          <input class="form-control"
+                 id="inputDailyEntryDate"
+                 type="text"
+                 datepicker-popup="dd MMM yyyy "
+                 is-open="vm.opened"
+                 ng-model="vm.dailyEntry.date"/>
+                    <span class="input-group-btn">
+                        <button class="btn btn-default"
+                                ng-click="vm.open($event)">
+                          <i class="glyphicon glyphicon-calendar"/>
+                        </button>
+                    </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+
+      <label class="col-md-2 control-label" for="inputDailyEntryWeight">Weight</label>
+      <div class="col-md-2"><input class="form-control" id="inputDailyEntryWeight" ng-model="vm.dailyEntry.weight"
+                                   type="number" step="0.1">
+      </div>
+
+      <label class="col-md-2 control-label" for="inputDailyEntryHeartRate">Heart Rate</label>
+      <div class="col-md-2"><input class="form-control" id="inputDailyEntryHeartRate" ng-model="vm.dailyEntry.restingHeartRate"
+                                   type="number" >
+      </div>
+
+    </div>
+
+    <div class="form-group">
+
+      <div ng-class="{'has-error':(dailyEntryEditForm.inputDailyEntrySleep.$invalid &&
+                                    dailyEntryEditForm.inputDailyEntrySleep.$dirty) ||
+                                    (dailyEntryEditForm.inputDailyEntrySoreness.$invalid &&
+                                    dailyEntryEditForm.inputDailyEntrySoreness.$dirty) ||
+                                    (dailyEntryEditForm.inputDailyEntryFatigue.$invalid &&
+                                    dailyEntryEditForm.inputDailyEntryFatigue.$dirty) ||
+                                    (dailyEntryEditForm.inputDailyEntryStress.$invalid &&
+                                    dailyEntryEditForm.inputDailyEntryStress.$dirty)}">
+
+        <span class="help-block has-error" style="margin-left: 200px;">
+                <span ng-show="dailyEntryEditForm.inputDailyEntrySleep.$error.required ||
+                dailyEntryEditForm.inputDailyEntrySoreness.$error.required ||
+                dailyEntryEditForm.inputDailyEntryFatigue.$error.required ||
+                dailyEntryEditForm.inputDailyEntryStress.$error.required ||
+                dailyEntryEditForm.inputDailyEntrySleep.$error.max ||
+                      dailyEntryEditForm.inputDailyEntrySoreness.$error.max ||
+                      dailyEntryEditForm.inputDailyEntryFatigue.$error.max ||
+                      dailyEntryEditForm.inputDailyEntryStress.$error.max ||
+                      dailyEntryEditForm.inputDailyEntrySleep.$error.min ||
+                dailyEntryEditForm.inputDailyEntrySoreness.$error.min ||
+                dailyEntryEditForm.inputDailyEntryFatigue.$error.min ||
+                dailyEntryEditForm.inputDailyEntryStress.$error.min">
+                    A value between 0 and 5 is required.
+                </span>
+            </span>
+      </div>
+
+      <div ng-class="{'has-error':dailyEntryEditForm.inputDailyEntrySleep.$invalid &&
+                                    dailyEntryEditForm.inputDailyEntrySleep.$dirty}">
+        <label class="col-md-2 control-label" for="inputDailyEntrySleep">Sleep</label>
+        <div class="col-md-1"><input class=" form-control" id="inputDailyEntrySleep" name="inputDailyEntrySleep" ng-model="vm.dailyEntry.sleep"
+                                     type="number" min="0" max="5" required>
+        </div>
+      </div>
+
+      <div ng-class="{'has-error':dailyEntryEditForm.inputDailyEntryFatigue.$invalid &&
+                                    dailyEntryEditForm.inputDailyEntryFatigue.$dirty}">
+        <label class="col-md-2 control-label" for="inputDailyEntryFatigue">Fatigue</label>
+        <div class="col-md-1"> <input class="form-control" id="inputDailyEntryFatigue" name="inputDailyEntryFatigue" ng-model="vm.dailyEntry.fatigue"
+                                      type="number" min="0" max="5" required>
+        </div>
+      </div>
+
+      <div ng-class="{'has-error':dailyEntryEditForm.inputDailyEntrySoreness.$invalid &&
+                                    dailyEntryEditForm.inputDailyEntrySoreness.$dirty}">
+        <label class="col-md-2 control-label" for="inputDailyEntrySoreness">Soreness</label>
+        <div class="col-md-1"> <input class="form-control" id="inputDailyEntrySoreness" name="inputDailyEntrySoreness" ng-model="vm.dailyEntry.soreness"
+                                      type="number" min="0" max="5" required>
+        </div>
+      </div>
+
+      <div ng-class="{'has-error':dailyEntryEditForm.inputDailyEntryStress.$invalid &&
+                                    dailyEntryEditForm.inputDailyEntryStress.$dirty}">
+        <label class="col-md-2 control-label" for="inputDailyEntryStress">Stress</label>
+        <div class="col-md-1"> <input class="form-control" id="inputDailyEntryStress" name="inputDailyEntryStress" ng-model="vm.dailyEntry.stress"
+                                      type="number" min="0" max="5" required>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="form-group">
+      <label class="col-md-2 control-label"
+             for="inputDailyEntryDescription">Description</label>
+
+      <div class="col-md-10">
+                <textarea class="form-control"
+                          id="inputDailyEntryDescription"
+                          placeholder="Description"
+                          rows="3"
+                          ng-model="vm.dailyEntry.notes"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-4 col-md-offset-2">
+                    <span>
+                        <button class="btn btn-primary"
+                                style="width:80px;margin-right:10px"
+                                ng-click="vm.submit()"
+                                ng-disabled="dailyEntryEditForm.$invalid">
+                          Save
+                        </button>
+                    </span>
+                    <span>
+                        <button class="btn btn-default"
+                                style="width:70px"
+                                ng-click="vm.cancel()">
+                          Cancel
+                        </button>
+                    </span>
+      </div>
+    </div>
+
+  </fieldset>
+</form>
+
