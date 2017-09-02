@@ -61,11 +61,11 @@ namespace DailyEntry.Core.Services
         private void UpdateWorkouts(DailyFeeling dailyFeeling)
         {
             var dailyFeelingCurrent = _uow.DiaryFeelingRepository.GetDailyFeeling(dailyFeeling.DailyFeelingId);
-            if (dailyFeelingCurrent.Workouts == null || !dailyFeelingCurrent.Workouts.Any())
-            {
-                AddWorkouts(dailyFeeling);
-                return;
-            }
+            //if (dailyFeelingCurrent.Workouts == null || !dailyFeelingCurrent.Workouts.Any())
+            //{
+            //    AddWorkouts(dailyFeeling);
+            //    return;
+            //}
 
             var isUpdate = false;
             foreach (var workoutCurrent in dailyFeelingCurrent.Workouts)
@@ -80,7 +80,7 @@ namespace DailyEntry.Core.Services
                 }
                 if (!isUpdate)
                 {
-                    //DeleteWorkout(workoutCurrent);
+                  //  DeleteWorkout(workoutCurrent);
                 }
                 isUpdate = false;
             }

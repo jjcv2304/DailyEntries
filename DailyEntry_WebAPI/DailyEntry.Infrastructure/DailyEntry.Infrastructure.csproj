@@ -55,6 +55,11 @@
     <Compile Include="Mapping\DiaryUserMap.cs" />
     <Compile Include="Mapping\WorkoutMap.cs" />
     <Compile Include="Mapping\WorkoutTypeMap.cs" />
+    <Compile Include="Migrations\201709020628561_Init.cs" />
+    <Compile Include="Migrations\201709020628561_Init.Designer.cs">
+      <DependentUpon>201709020628561_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repositories\DailyFeelingRepository.cs" />
     <Compile Include="Repositories\SecurityRepository.cs" />
     <Compile Include="Repositories\WorkoutRepository.cs" />
@@ -71,6 +76,11 @@
       <Project>{BB607119-EB8B-481F-80D6-2E5F203DBA83}</Project>
       <Name>DailyEntry.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201709020628561_Init.resx">
+      <DependentUpon>201709020628561_Init.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

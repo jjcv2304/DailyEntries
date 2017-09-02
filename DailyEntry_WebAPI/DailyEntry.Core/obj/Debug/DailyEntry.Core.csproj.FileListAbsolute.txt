@@ -28,3 +28,13 @@ D:\WORK\DailyEntry\DailyEntry.Core\bin\Debug\EntityFramework.SqlServer.xml
 D:\WORK\DailyEntry\DailyEntry.Core\obj\Debug\DailyEntry.Core.csprojResolveAssemblyReference.cache
 D:\WORK\DailyEntry\DailyEntry.Core\obj\Debug\DailyEntry.Core.dll
 D:\WORK\DailyEntry\DailyEntry.Core\obj\Debug\DailyEntry.Core.pdb
+C:\WORK\PROJECTS\DailyEntries\DailyEntry_WebAPI\DailyEntry.Core\bin\Debug\DailyEntry.Core.dll.config
+C:\WORK\PROJECTS\DailyEntries\DailyEntry_WebAPI\DailyEntry.Core\bin\Debug\DailyEntry.Core.dll
+C:\WORK\PROJECTS\DailyEntries\DailyEntry_WebAPI\DailyEntry.Core\bin\Debug\DailyEntry.Core.pdb
+C:\WORK\PROJECTS\DailyEntries\DailyEntry_WebAPI\DailyEntry.Core\bin\Debug\EntityFramework.dll
+C:\WORK\PROJECTS\DailyEntries\DailyEntry_WebAPI\DailyEntry.Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\WORK\PROJECTS\DailyEntries\DailyEntry_WebAPI\DailyEntry.Core\bin\Debug\EntityFramework.xml
+C:\WORK\PROJECTS\DailyEntries\DailyEntry_WebAPI\DailyEntry.Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\WORK\PROJECTS\DailyEntries\DailyEntry_WebAPI\DailyEntry.Core\obj\Debug\DailyEntry.Core.csprojResolveAssemblyReference.cache
+C:\WORK\PROJECTS\DailyEntries\DailyEntry_WebAPI\DailyEntry.Core\obj\Debug\DailyEntry.Core.dll
+C:\WORK\PROJECTS\DailyEntries\DailyEntry_WebAPI\DailyEntry.Core\obj\Debug\DailyEntry.Core.pdb

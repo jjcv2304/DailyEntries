@@ -3,8 +3,8 @@
   "use strict";
 
   var app = angular.module("dailyEntryApp",
-//      ["common.services", "ui.router", "ui.mask", "ui.bootstrap", "angularCharts"]);
-      ["common.services", "dailyEntryResourceMock", "ui.router", "ui.mask", "ui.bootstrap", "angularCharts"]);
+      ["common.services", "ui.router", "ui.mask", "ui.bootstrap", "angularCharts"]);
+     // ["common.services", "dailyEntryResourceMock", "ui.router", "ui.mask", "ui.bootstrap", "angularCharts"]);
 
   app.config(function ($provide) {
     $provide.decorator("$exceptionHandler", ["$delegate", function ($delegate) {

@@ -30,3 +30,15 @@ D:\WORK\DailyEntry\DailyEntry.Infrastructure\bin\Debug\EntityFramework.xml
 D:\WORK\DailyEntry\DailyEntry.Infrastructure\obj\Debug\DailyEntry.Infrastructure.csprojResolveAssemblyReference.cache
 D:\WORK\DailyEntry\DailyEntry.Infrastructure\obj\Debug\DailyEntry.Infrastructure.dll
 D:\WORK\DailyEntry\DailyEntry.Infrastructure\obj\Debug\DailyEntry.Infrastructure.pdb
+C:\WORK\PROJECTS\DailyEntries\DailyEntry_WebAPI\DailyEntry.Infrastructure\bin\Debug\DailyEntry.Infrastructure.dll.config
+C:\WORK\PROJECTS\DailyEntries\DailyEntry_WebAPI\DailyEntry.Infrastructure\bin\Debug\DailyEntry.Infrastructure.dll
+C:\WORK\PROJECTS\DailyEntries\DailyEntry_WebAPI\DailyEntry.Infrastructure\bin\Debug\DailyEntry.Infrastructure.pdb
+C:\WORK\PROJECTS\DailyEntries\DailyEntry_WebAPI\DailyEntry.Infrastructure\bin\Debug\DailyEntry.Core.dll
+C:\WORK\PROJECTS\DailyEntries\DailyEntry_WebAPI\DailyEntry.Infrastructure\bin\Debug\EntityFramework.dll
+C:\WORK\PROJECTS\DailyEntries\DailyEntry_WebAPI\DailyEntry.Infrastructure\bin\Debug\DailyEntry.Core.pdb
+C:\WORK\PROJECTS\DailyEntries\DailyEntry_WebAPI\DailyEntry.Infrastructure\bin\Debug\EntityFramework.xml
+C:\WORK\PROJECTS\DailyEntries\DailyEntry_WebAPI\DailyEntry.Infrastructure\obj\Debug\DailyEntry.Infrastructure.csprojResolveAssemblyReference.cache
+C:\WORK\PROJECTS\DailyEntries\DailyEntry_WebAPI\DailyEntry.Infrastructure\obj\Debug\DailyEntry.Infrastructure.dll
+C:\WORK\PROJECTS\DailyEntries\DailyEntry_WebAPI\DailyEntry.Infrastructure\obj\Debug\DailyEntry.Infrastructure.pdb
+C:\WORK\PROJECTS\DailyEntries\DailyEntry_WebAPI\DailyEntry.Infrastructure\obj\Debug\DailyEntry.Infrastructure.Migrations.Init.resources
+C:\WORK\PROJECTS\DailyEntries\DailyEntry_WebAPI\DailyEntry.Infrastructure\obj\Debug\DailyEntry.Infrastructure.csproj.GenerateResource.Cache
