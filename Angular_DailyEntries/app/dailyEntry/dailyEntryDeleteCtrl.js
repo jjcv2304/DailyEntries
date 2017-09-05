@@ -14,11 +14,13 @@
     vm.title = "Confirm Delete entry: " + _date;
 
     vm.remove = function () {
-      vm.dailyEntry.$remove(vm.dailyEntry.dailyEntryId,function (data) {
+      vm.dailyEntry.$remove(vm.dailyEntry,function (data) {
         toastr.success("Deleted Successful");
         $state.go('dailyEntryList');
+      },function (err) {
+        toastr.error(err.data.exceptionMessage,'Error deleting');
       });
-    }
+    };
 
     vm.cancel = function () {
       $state.go('dailyEntryList');

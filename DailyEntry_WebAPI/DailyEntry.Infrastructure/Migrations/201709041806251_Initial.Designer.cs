@@ -5,13 +5,13 @@ namespace DailyEntry.Infrastructure.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    public sealed partial class Init : IMigrationMetadata
+    public sealed partial class Initial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Init));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Initial));
         
         string IMigrationMetadata.Id
         {
-            get { return "201709020628561_Init"; }
+            get { return "201709041806251_Initial"; }
         }
         
         string IMigrationMetadata.Source

@@ -12,7 +12,7 @@ using System.Web.Http.Cors;
 
 namespace DailyEntry.WebAPI.Controllers
 {
-    [DailyEntryAuthorize]
+   // [DailyEntryAuthorize]
    // [EnableCors("*","*","*")]
     public class DailyEntryController : ApiController
     {
@@ -74,7 +74,7 @@ namespace DailyEntry.WebAPI.Controllers
             try
             {
                 _service.DeleteDailyFeelingAndWorkout(dailyFeelingVM.DailyFeelingId);
-                return Request.CreateResponse(HttpStatusCode.NotImplemented);
+                return Request.CreateResponse(HttpStatusCode.OK);
 
             }
             catch (Exception ex)

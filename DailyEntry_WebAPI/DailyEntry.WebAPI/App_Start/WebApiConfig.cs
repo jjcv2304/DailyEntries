@@ -25,6 +25,12 @@ namespace DailyEntry.WebAPI
                 defaults: new { controller = "workout", id = RouteParameter.Optional }
             );
 
+            config.Routes.MapHttpRoute(
+                name: "WorkoutType",
+                routeTemplate: "api/workoutType/{workoutTypeId}",
+                defaults: new { controller = "workoutType", workoutTypeId = RouteParameter.Optional }
+            );
+
             //just for token implementation
             //config.Routes.MapHttpRoute(
             //    name: "Token",

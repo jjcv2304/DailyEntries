@@ -65,6 +65,7 @@ namespace DailyEntry.WebAPI
         {
             kernel.Bind<IDailyFeelingRepository>().To<DailyFeelingRepository>();
             kernel.Bind<IWorkoutRepository>().To<WorkoutRepository>();
+           // kernel.Bind<Iwork>(),
             kernel.Bind<TrainningDB>().To<TrainningDB>();
             kernel.Bind<IUnitOfWork>().To<UnitOfWork>();            
             kernel.Bind<IServiceDailyTracker>().To<ServiceDailyTracker>();

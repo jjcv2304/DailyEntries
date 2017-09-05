@@ -1,3 +1,5 @@
+using DailyEntry.Core.Model;
+
 namespace DailyEntry.Infrastructure.Migrations
 {
     using System;
@@ -26,6 +28,16 @@ namespace DailyEntry.Infrastructure.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            context.WorkoutTypes.AddOrUpdate(
+                wt=> wt.Name,
+                new WorkoutType {Name="Running", Description = string.Empty},
+                new WorkoutType { Name = "Swimming", Description = string.Empty },
+                new WorkoutType { Name = "Climbing", Description = string.Empty },
+                new WorkoutType { Name = "Trekking", Description = string.Empty },
+                new WorkoutType { Name = "Cycling", Description = string.Empty },
+                new WorkoutType { Name = "Other", Description = string.Empty }
+                );
         }
     }
 }

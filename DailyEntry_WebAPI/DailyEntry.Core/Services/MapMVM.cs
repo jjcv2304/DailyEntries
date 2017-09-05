@@ -110,17 +110,22 @@ namespace DailyEntry.Core.Services
         public static List<WorkoutVM> WorkoutToWorkoutVM(ICollection<Workout> workouts)
         {
            var  workoutsVM = workouts== null ? null : (from w in workouts
-                         select new WorkoutVM()
-                         {
-                             WorkoutId = w.WorkoutId,
-                             Distance = w.Distance,
-                             TotalTime = w.TotalTime,
-                             Notes = w.Notes,
-                             DiaryFeelingId = w.DiaryFeelingId,
-                             WorkoutTypeId = w.WorkoutTypeId,
-                             WorkoutTypeName = w.WorkoutType.Name
-                         }).ToList();
+                         select WorkoutToWorkoutVM(w)).ToList();
             return workoutsVM;
+        }
+
+        public static WorkoutVM WorkoutToWorkoutVM(Workout workout)
+        {
+            return new WorkoutVM()
+            {
+                WorkoutId = workout.WorkoutId,
+                Distance = workout.Distance,
+                TotalTime = workout.TotalTime,
+                Notes = workout.Notes,
+                DiaryFeelingId = workout.DiaryFeelingId,
+                WorkoutTypeId = workout.WorkoutTypeId,
+                WorkoutTypeName = workout.WorkoutType?.Name
+            };
         }
 
         public static Workout WorkoutToWorkoutVM(WorkoutVM workoutVM)

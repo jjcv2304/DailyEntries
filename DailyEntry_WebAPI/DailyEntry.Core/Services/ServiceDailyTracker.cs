@@ -74,13 +74,14 @@ namespace DailyEntry.Core.Services
                 {
                     if (workoutCurrent.WorkoutId == workout.WorkoutId)
                     {
-                        //UpdateWorkout(workout);
+                        var workoutVM = MapMVM.WorkoutToWorkoutVM(workout);
+                        EditWorkout(workoutVM);
                         isUpdate = true;
                     }
                 }
                 if (!isUpdate)
                 {
-                  //  DeleteWorkout(workoutCurrent);
+                    DeleteWorkout(workoutCurrent.WorkoutId);
                 }
                 isUpdate = false;
             }
@@ -96,7 +97,8 @@ namespace DailyEntry.Core.Services
                 }
                 if (isCreate)
                 {
-                    //AddWorkout(workout);
+                    var workoutVM= MapMVM.WorkoutToWorkoutVM(workout);
+                    AddWorkout(workoutVM);
                 }
             }
 
@@ -121,7 +123,7 @@ namespace DailyEntry.Core.Services
         {
             var dailyFeeling = _uow.DiaryFeelingRepository.GetDailyFeeling(dailyFeelingId);
             if (dailyFeeling == null) throw new Exception("Id doesn't exists");
-
+            var workoutsToDelete = new List<Workout>();
             if (dailyFeeling.Workouts != null && dailyFeeling.Workouts.Count > 0)
             {
                 foreach (var workout in dailyFeeling.Workouts)
@@ -129,9 +131,13 @@ namespace DailyEntry.Core.Services
                     workout.DiaryFeelingId = dailyFeeling.DailyFeelingId;
                     if (workout.WorkoutId != 0)
                     {
-                        _uow.WorkoutRepository.DeleteWorkout(workout);
+                        workoutsToDelete.Add(workout);
                     }
                 }
+            }
+            foreach (var workout in workoutsToDelete)
+            {
+                _uow.WorkoutRepository.DeleteWorkout(workout);
             }
             _uow.DiaryFeelingRepository.DeleteDailyFeeling(dailyFeeling);
 
