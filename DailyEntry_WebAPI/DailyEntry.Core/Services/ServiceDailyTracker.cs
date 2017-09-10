@@ -26,16 +26,16 @@ namespace DailyEntry.Core.Services
             var totalCount = _uow.DiaryFeelingRepository.CountDailyFeelings();
             var totalPages = Math.Ceiling((double)totalCount / pageSize);
 
-            return MapMVM.DiaryFeelingsToDiaryFeelingPageVM(diaryFeelings, totalCount, totalPages);
+            return MapMVM.DailyFeelingsToDiaryFeelingPageVM(diaryFeelings, totalCount, totalPages);
         }
         public DailyFeelingVM GetDailyFeeling(int dailyFeelingId)
         {
             var diaryFeeling = _uow.DiaryFeelingRepository.GetDailyFeeling(dailyFeelingId);
-            return MapMVM.DiaryFeelingToDiaryFeelingVM(diaryFeeling);
+            return MapMVM.DailyFeelingToDiaryFeelingVM(diaryFeeling);
         }
         public void AddDailyFeeling(DailyFeelingVM diaryFeelingVM)
         {
-            var diaryEntry = MapMVM.DiaryFeelingVMToDiaryFeeling(diaryFeelingVM);
+            var diaryEntry = MapMVM.DailyFeelingVMToDiaryFeeling(diaryFeelingVM);
             _uow.DiaryFeelingRepository.CreateDailyFeeling(diaryEntry);
             _uow.Save();
         }
@@ -43,19 +43,19 @@ namespace DailyEntry.Core.Services
         //DailyFeelings Graph
         public void AddDailyFeelingAndWorkouts(DailyFeelingVM dailyFeelingVM)
         {
-            var dailyFeeling = MapMVM.DiaryFeelingVMToDiaryFeeling(dailyFeelingVM);
+            var dailyFeeling = MapMVM.DailyFeelingVMToDiaryFeeling(dailyFeelingVM);
             _uow.DiaryFeelingRepository.CreateDailyFeeling(dailyFeeling);
             AddWorkouts(dailyFeeling);
             _uow.Save();
-            dailyFeelingVM = MapMVM.DiaryFeelingToDiaryFeelingVM(dailyFeeling);
+            dailyFeelingVM = MapMVM.DailyFeelingToDiaryFeelingVM(dailyFeeling);
         }
         public void EditDiaryFeelingAndWorkouts(DailyFeelingVM dailyFeelingVM)
         {
-            var dailyFeeling = MapMVM.DiaryFeelingVMToDiaryFeeling(dailyFeelingVM);
+            var dailyFeeling = MapMVM.DailyFeelingVMToDiaryFeeling(dailyFeelingVM);
             _uow.DiaryFeelingRepository.UpdateDailyFeeling(dailyFeeling);
             UpdateWorkouts(dailyFeeling);
             _uow.Save();
-            dailyFeelingVM = MapMVM.DiaryFeelingToDiaryFeelingVM(dailyFeeling);
+            dailyFeelingVM = MapMVM.DailyFeelingToDiaryFeelingVM(dailyFeeling);
         }
 
         private void UpdateWorkouts(DailyFeeling dailyFeeling)

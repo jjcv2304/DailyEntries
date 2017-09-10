@@ -9,7 +9,7 @@
 
         vm.dailyEntry = dailyEntry;
 
-        if (vm.dailyEntry && vm.dailyEntry.dailyEntryId) {
+        if (vm.dailyEntry && vm.dailyEntry.dailyFeelingId) {
             vm.title = "Edit: " + vm.dailyEntry.date;
         } else {
             vm.title = "New Daily Entry"

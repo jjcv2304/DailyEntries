@@ -54,3 +54,4 @@ D:\WORK\DailyEntries\DailyEntry_WebAPI\DailyEntry.Infrastructure\obj\Debug\Daily
 D:\WORK\DailyEntries\DailyEntry_WebAPI\DailyEntry.Infrastructure\obj\Debug\DailyEntry.Infrastructure.pdb
 D:\WORK\DailyEntries\DailyEntry_WebAPI\DailyEntry.Infrastructure\obj\Debug\DailyEntry.Infrastructure.Migrations.Initial.resources
 D:\WORK\DailyEntries\DailyEntry_WebAPI\DailyEntry.Infrastructure\obj\Debug\DailyEntry.Infrastructure.csproj.GenerateResource.Cache
+D:\WORK\DailyEntries\DailyEntry_WebAPI\DailyEntry.Infrastructure\obj\Debug\DailyEntry.Infrastructure.Migrations.UpdataDairyTableNameToDaily.resources

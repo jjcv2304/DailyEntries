@@ -59,6 +59,10 @@
     <Compile Include="Migrations\201709041806251_Initial.Designer.cs">
       <DependentUpon>201709041806251_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709101311580_UpdataDairyTableNameToDaily.cs" />
+    <Compile Include="Migrations\201709101311580_UpdataDairyTableNameToDaily.Designer.cs">
+      <DependentUpon>201709101311580_UpdataDairyTableNameToDaily.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repositories\DailyFeelingRepository.cs" />
     <Compile Include="Repositories\SecurityRepository.cs" />
@@ -80,6 +84,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201709041806251_Initial.resx">
       <DependentUpon>201709041806251_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709101311580_UpdataDairyTableNameToDaily.resx">
+      <DependentUpon>201709101311580_UpdataDairyTableNameToDaily.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -21,7 +21,7 @@ describe('DailyEntryEditController',function () {
     });
 
     it('should set title to Edit',function () {
-        dailyEntry = {dailyEntryId : 1};
+        dailyEntry = {dailyFeelingId : 1};
         vm = $controller('DailyEntryEditCtrl as vm', { $location: $location, $scope: scope, dailyEntry : dailyEntry,
             $state : $state, dailyEntryService : dailyEntryService});
         expect(vm.title).toContain('Edit');

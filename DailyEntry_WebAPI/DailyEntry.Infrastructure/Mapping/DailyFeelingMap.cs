@@ -12,8 +12,8 @@ namespace DailyEntry.Infrastructure.Mapping
 
             // Properties
             // Table & Column Mappings
-            this.ToTable("tblDiaryFeeling");
-            this.Property(t => t.DailyFeelingId).HasColumnName("DiaryFeelingId");
+            this.ToTable("tblDailyFeeling");
+            this.Property(t => t.DailyFeelingId).HasColumnName("DailyFeelingId");
             this.Property(t => t.Sleep).HasColumnName("Sleep");
             this.Property(t => t.Fatigue).HasColumnName("Fatigue");
             this.Property(t => t.Stress).HasColumnName("Stress");

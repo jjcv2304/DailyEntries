@@ -8,9 +8,9 @@ namespace DailyEntry.Core.Services
     public static class MapMVM
     {
         //DailyFeeling
-        public static DailyFeelingPageVM DiaryFeelingsToDiaryFeelingPageVM(List<DailyFeeling> diaryFeelings, int totalCount, double totalPages)
+        public static DailyFeelingPageVM DailyFeelingsToDiaryFeelingPageVM(List<DailyFeeling> diaryFeelings, int totalCount, double totalPages)
         {
-            var diaryFeelingsVM = MapMVM.DiaryFeelingsToDiaryFeelingsVM(diaryFeelings);
+            var diaryFeelingsVM = MapMVM.DailyFeelingsToDiaryFeelingsVM(diaryFeelings);
             var dailyFeelingPageVM = new DailyFeelingPageVM()
             {
                 DailyFeelingsVM = diaryFeelingsVM,
@@ -21,7 +21,7 @@ namespace DailyEntry.Core.Services
             };
             return dailyFeelingPageVM;
         }
-        public static List<DailyFeelingVM> DiaryFeelingsToDiaryFeelingsVM(List<DailyFeeling> diaryFeelings)
+        public static List<DailyFeelingVM> DailyFeelingsToDiaryFeelingsVM(List<DailyFeeling> diaryFeelings)
         {
             var diaryFeelingsVM = from df in diaryFeelings
                                   select new DailyFeelingVM()
@@ -49,7 +49,7 @@ namespace DailyEntry.Core.Services
             return diaryFeelingsVM.ToList();
         }
 
-        public static DailyFeeling DiaryFeelingVMToDiaryFeeling(DailyFeelingVM df)
+        public static DailyFeeling DailyFeelingVMToDiaryFeeling(DailyFeelingVM df)
         {
             var diaryFeeling = new DailyFeeling()
                                   {
@@ -75,7 +75,7 @@ namespace DailyEntry.Core.Services
             return diaryFeeling;
         }
         
-        public static DailyFeelingVM DiaryFeelingToDiaryFeelingVM(DailyFeeling df)
+        public static DailyFeelingVM DailyFeelingToDiaryFeelingVM(DailyFeeling df)
         {
             var diaryFeeling = new DailyFeelingVM()
             {

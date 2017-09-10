@@ -1,30 +1,30 @@
 "use strict";
 
-describe('Daily entry edit controller',function () {
-    var $controller, scope, vm, mockDailyEntryResource, mockDailyEntry;
+describe('Daily entry list controller', function () {
+  var $controller, scope, $ctrl, mockDailyEntryResource, mockDailyEntry, rootScope;
 
-    beforeEach(module('dailyEntryApp'));
+  beforeEach(module('dailyEntryApp'));
 
-    beforeEach(inject(function(_$controller_, $rootScope){
-        scope = $rootScope.$new();
-        $controller = _$controller_;
-        mockDailyEntry = sinon.stub({$remove:function(){}});
-        mockDailyEntryResource = sinon.stub({get:function () {}, save:function () {}, update :function () {}})
-    }));
-
-    it('should call the delete function with one parameter',function () {
-        vm = $controller('DailyEntryListCtrl as vm', { $scope: scope, dailyEntryResource: mockDailyEntryResource});
-
-        expect(mockDailyEntryResource.get.calledOnce).toBeTruthy();
+  beforeEach(inject(function ($componentController, $rootScope) {
+    //rootScope = $rootScope;
+    //scope = $rootScope.$new();
+    $controller = $componentController;
+    mockDailyEntry = sinon.stub({
+      $remove: function () {
+      }
     });
+    mockDailyEntryResource = sinon.stub({
+      get: function () {
+      }, save: function () {
+      }, update: function () {
+      }
+    })
+  }));
 
-    it('should set vm.dailyEntries the result of dailyEntryResource.get ',function () {
-        //var dailyEntriesMock = {};
-        //dailyEntryResourceMock.get.returns(dataMock);
-        //
-        //vm = $controller('DailyEntryListCtrl as vm', { $scope: scope, dailyEntryResource: dailyEntryResourceMock});
-        //
-        //expect(vm.dailyEntries).toBe({});
-    });
+  it('should call the get function on initializing the controller', function () {
+    // $ctrl = $controller('dailyEntryList', {}, {$scope: scope, dailyEntryResource: mockDailyEntryResource});
+    $ctrl = $controller('dailyEntryList', { dailyEntryResource: mockDailyEntryResource}, {});
+    expect(mockDailyEntryResource.get.calledOnce).toBeTruthy();
+  });
 
 });

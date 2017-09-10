@@ -18,7 +18,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="dailyEntry in vm.dailyEntries">
+            <tr ng-repeat="dailyEntry in $ctrl.dailyEntries">
               <td>
                 <a ui-sref="dailyEntryDetail({dailyFeelingId: dailyEntry.dailyFeelingId})">
                   {{ dailyEntry.date | date}}</a>
